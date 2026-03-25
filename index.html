@@ -15,8 +15,8 @@ body {
     margin: 0;
     padding: 0;
 
-    /* Sfondo pixel art arcade con cache buster */
-    background-image: url('https://media.istockphoto.com/id/1333010525/vector/simple-flat-pixel-art-illustration-of-cartoon-outdoor-landscape-background-pixel-arcade.jpg?s=612x612&w=0&k=20&c=uTGqB9fhmjzaNd17EGRHYU04_70K7a3M8ilRoJjDwtY=&v=2');
+    /* Sfondo pixel art arcade con cache-buster automatico */
+    background-image: url('https://marti2564.github.io/PlanetEnglishMars/sfondo_1.jpg?v=' + new Date().getTime());
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -132,6 +132,9 @@ h1 {
 
     container.appendChild(row);
   });
+
+  // Aggiornamento dinamico cache-buster per sfondo
+  document.body.style.backgroundImage = "url('https://marti2564.github.io/PlanetEnglishMars/sfondo_1.jpg?v=" + new Date().getTime() + "')";
 </script>
 
 </body>
