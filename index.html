@@ -13,6 +13,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    position: relative; /* aggiunto */
 
     background-image: url('https://media.istockphoto.com/id/1333010525/vector/simple-flat-pixel-art-illustration-of-cartoon-outdoor-landscape-background-pixel-arcade.jpg');
     background-size: cover;
@@ -23,14 +24,15 @@ body {
     image-rendering: pixelated; /* mantiene effetto pixel nitido */
 }
 
-/* overlay leggero per migliorare leggibilità */
 body::after {
     content: "";
-    position: fixed;
+    position: absolute; /* cambiato da fixed a absolute */
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.3);
-    z-index: -1;
+    pointer-events: none; /* così non blocca clic o interazioni */
+    z-index: 0; /* sopra lo sfondo ma sotto tutto il resto */
 }
 
   h1 {
