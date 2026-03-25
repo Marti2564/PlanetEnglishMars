@@ -9,26 +9,29 @@
 
 <style>
 body {
-  font-family: Arial, sans-serif;
-  color: #3b2f1c; /* marrone scuro stile pergamena */
-  margin: 0; padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
 
-  background-image: url('map1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-image: url('https://media.istockphoto.com/id/1333010525/vector/simple-flat-pixel-art-illustration-of-cartoon-outdoor-landscape-background-pixel-arcade.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    image-rendering: pixelated; /* mantiene effetto pixel nitido */
 }
 
-  /* stelle */
-  body::before {
+/* overlay leggero per migliorare leggibilità */
+body::after {
     content: "";
     position: fixed;
-    width: 100%; height: 100%;
-    background-image: radial-gradient(white 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
     z-index: -1;
-  }
+}
 
   h1 {
     text-align: center;
